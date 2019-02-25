@@ -1,0 +1,244 @@
+/*Color palette: old cashmere
+  oc-blue: #2d4c55;
+  oc-green: #8e9b80;
+  oc-beige: #dbcab0;
+  oc-lbrown: #b19078;
+  oc-brown: #a57b67;
+*/
+
+/*Outermost 'wrapper' of the navbar*/
+header {
+  background: #b19078;
+  width: 100%;
+  height: 60px;
+  /*Gives importance to header/navbar so that page content scrolls underneath it */
+  z-index: 150;
+  /*gives stylistic shadow to the header*/
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+/*Not sure what the purpose of this code is. Refer to youtube tutorial on it */
+header::after {
+  content: '';
+  display: table;
+  clear:  both;
+}
+/*Codes the 'TA' Box on the left of the navbar*/
+#logo {
+  font-size: 2.5rem;
+  float: left;
+  padding: 8px 8px;
+  line-height: 20px;
+  margin: 8px auto;
+  border-style: solid;
+  border-color: #2d4c55 #8e9b80 #b19078 #a57b67;
+  background-color: white;
+  color: #444;  
+}
+/*This codes for the container that holds the logo and unordered list of webpage links*/
+#nav-container {
+  font-family: roboto slab;
+  background-color: #dbcab0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+/*Places the unordered list on the right side of the navbar*/
+nav {
+  float: right;
+  }
+/*Removes the bullet circles of teh unordered list items */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+/*Places the list elements side by side and creates space between them*/
+nav li {
+  display: inline-block; 
+  font-size: 1em;
+  line-height: 24px;
+  padding-top: 20px; 
+  position: relative;
+}
+
+.middle-li {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+/*Gives style to the a elements*/
+nav a {
+  font-family: Roboto Slab;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/*Makes the font of the link elements white while the mouse is over them*/
+nav a:hover {
+  color: #fff;
+}
+/*Codes for the animated block that appears when mouse hovers on link element*/
+nav a::before{
+  content: '';
+  display: block;
+  height: 5px;
+  width: 0%;
+  background-color: #444;
+  top: 0;
+  position: absolute;
+  transition: all ease-in-out 200ms;
+}
+/*Causes black animated block to move above and across link element*/
+nav a:hover::before {
+  width: 100%;
+}
+/*Fixes the navbar to the top of the webpage so that scrolling doesn't move it from the top*/
+.nav-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/*Container of welcome section of webpage*/
+div.container1 {
+  height: 800px;
+  position: relative;
+}
+/*Centers the text and places colored bordered around content of welcome section*/
+div.container1 h1 {
+  font-family: Roboto Slab;
+  text-align: center;
+  color: #232323;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right-margin: -50%;
+  transform: translate(-50%,-50%);
+  border-color: #2d4c55 #8e9b80 #dbcab0 #a57b67;
+  border-style: solid;
+  padding: 50px;
+}
+/*Gives a relative position to element*/
+.pos-rel {
+  position: relative;
+}
+/*Style for target div elements utilized by the navbar*/
+.scroll-target {
+  width: 100%;
+  height: 60px;
+}
+/*Style and positioning of each section's title*/
+.content-title {
+  font-family: Roboto Slab;
+  text-align: center;
+  color: #a57b67;
+  width: 100%;
+  margin-bottom: 30px;
+}
+/*Codes the style for the about me section of the webpage*/
+.about-me {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #4292f4;
+}
+/*Codes the positioning for the div that contains the picture and text of the about me section*/
+#about-content {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+/*Codes the size and positioning of the about me picture */
+#profile {
+  width: 300px;
+  display: block;
+  margin: 20px auto;
+}
+/*Codes the style and positioning of the text content in the about me section*/
+#about-text {
+  width: 60%;
+  font-size: 18px;
+  font-family: Roboto Slab;
+  background-color: white;
+  color: #232323;
+  margin: 0 auto;
+  
+}
+/*Codes the size of the projects section and places a border around it*/
+.projects {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #a57b67;
+}
+/*Codes for margin spacing of the rows in the project section*/
+#projects div.row {
+  margin: 0 10px;
+}
+/*Codes for font style and alignment for the captions in the projects section*/
+div.caption p {
+  text-align: center;
+  font-family: Roboto Slab;
+}
+/*Codes the width of the project pictures*/
+.placeholder {
+  width: 60%;
+}
+.tesla-img {
+  width: 80%;
+}
+.random-quote {
+  width: 90%;
+}
+/*Gives the contact section a specified length and a border*/
+.contact {
+  font-family: Roboto Slab;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #8e9b80;
+  margin-bottom: 10px;
+}
+/*Style for contact forms*/
+.contact p{
+  padding-bottom: 50px;
+  color: #333333;
+  text-align: center;
+  font-size: 18px;
+  margin: 0px 10px;
+}
+.contact .input-group {
+  margin-bottom: 25px;
+}
+.contact .form-control, span {
+  border-radius: 0 !important;
+}
+.contact .btn {
+  border-radius: 0;
+  width: 100%;
+  font-size: 15px;
+  background-color: #f08080;
+  color: #fff;
+}
+.contact btn:hover {
+  background-color: #a85959;
+  color: #fff;
+}
+
+/*Removes the bullet circles of the unordered list items */
+.contact ul {
+  text-align: center;
+  margin: auto;
+  padding: 0;
+  list-style: none;
+}
+/*Places the list elements side by side and creates space between them*/
+.contact li {
+  display: inline-block; 
+  margin: 20px;
+  position: relative;
+  font-size: 35px;
+}
+
+#social-media {
+  text-align: center;
+}
